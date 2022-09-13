@@ -56,4 +56,18 @@ module.exports = {
         console.log(JSON.stringify(database))
         res.status(200).send(dbEntry)
     },
+    getLeague: (req, res) =>{
+        //User inputs league and submits(req.params)
+        //input comes back to backend, then checks database(for loop) to see if league exists
+        //if it does, return with that data, if not, do nothing or alert
+        let userGrabLeagueInput = req.params.name 
+        console.log(userGrabLeagueInput)
+        for (let i=0; i<database.length; i++){
+            if (database[i].name.toLowerCase().includes(userGrabLeagueInput.toLowerCase())){
+                console.log(database[i])
+                res.status(200).send(database)
+                return
+                } 
+        }    
+    }
 }
