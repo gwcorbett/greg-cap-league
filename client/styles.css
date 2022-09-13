@@ -1,3 +1,7 @@
 #teamInput form input {
     vertical-align: middle;
 }
+
+.matchup-span {
+    display: block;
+}
