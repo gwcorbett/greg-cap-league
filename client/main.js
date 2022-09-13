@@ -12,12 +12,13 @@ const team9 = document.getElementById('team9')
 const team10 = document.getElementById('team10')
 const team11 = document.getElementById('team11')
 const team12 = document.getElementById('team12')
-
+const leagueName = document.getElementById('league-name')
 const schedule = document.querySelector('section')
 
 form.addEventListener('submit', (event) =>{
     event.preventDefault();
     const postobj = {
+        name: leagueName.value,
         team1: team1.value,
         team2: team2.value,
         team3: team3.value,

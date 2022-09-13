@@ -19,6 +19,8 @@
 </h2>
 <body>
     <form id="teamInput">
+        <h3>League Name</h3>
+        <input type="text" id="league-name" name="league-name" value="">
         <h3>Division 1</h3>    
         <label for="team1">Team 1:</label><br>
         <input type="text" id="team1" name="team1" value=""><br>
@@ -51,8 +53,21 @@
 
       <section></section>
 
+    <form id="grab-by-name-form">
+        <label for="grab-by-name">Grab A League By Name:</label><br>
+        <input type="text" id="grab-by-name" name="grab-by-name" value=""><br><br>
+        <button>Submit</button> 
+    </form>  
+
+    <form id="delete-by-name-form">
+        <label for="delete-by-name">Delete A League By Name:</label><br>
+        <input type="text" id="delete-by-name" name="delete-by-name" value=""><br><br>
+        <button>Submit</button>
+    </form>
+
       <script src="../node_modules/axios/dist/axios.min.js"></script>
       <script src="main.js"></script>
     
 </body>
 </html>
+

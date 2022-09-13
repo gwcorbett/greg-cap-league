@@ -33,6 +33,7 @@ database = []
 module.exports = {
     processTeams: (req, res) =>{
         const league = req.body
+        const name = league.name
     
         const template = schedule
         let stringtemplate = JSON.stringify(template)
@@ -50,7 +51,7 @@ module.exports = {
         stringtemplate = stringtemplate.replaceAll(`team11`, league.team11)
         stringtemplate = stringtemplate.replaceAll(`team12`, league.team12)
         let result = JSON.parse(stringtemplate)
-        database.push(result)
+        database.push({name:name, schedule:result})
         console.log(JSON.stringify(database))
         res.status(200).send(result)
     },
