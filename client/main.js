@@ -41,7 +41,15 @@ form.addEventListener('submit', (event) =>{
 });
 
 
-function processSchedule(data){
+function processSchedule(fullData){
+
+    schedule.innerHTML = ''
+    
+    let data = fullData.schedule
+    let name = fullData.name
+    let leagueHeader = document.createElement('h2')
+    leagueHeader.innerHTML = name
+    schedule.appendChild(leagueHeader)
     //Loop through the data per week and create a div for each.
     for (let i=0; i < data.length; i++){
             let card = document.createElement('div')

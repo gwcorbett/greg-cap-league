@@ -51,8 +51,9 @@ module.exports = {
         stringtemplate = stringtemplate.replaceAll(`team11`, league.team11)
         stringtemplate = stringtemplate.replaceAll(`team12`, league.team12)
         let result = JSON.parse(stringtemplate)
-        database.push({name:name, schedule:result})
+        let dbEntry = {name:name, schedule:result}
+        database.push(dbEntry)
         console.log(JSON.stringify(database))
-        res.status(200).send(result)
+        res.status(200).send(dbEntry)
     },
 }
